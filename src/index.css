@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 15 8% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 15 8% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 15 8% 15%;
+
+    /* Professional Orange Primary */
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Professional Secondary (Dark Gray) */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Muted Colors */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+
+    /* Accent Colors */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 12%;
+    --ring: 24 100% 55%;
+    
+    /* Enhanced Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4% / 0.95), hsl(24 100% 55% / 0.8));
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Border radius */
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    /* Removed border-border as it's not properly defined */
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Set black background by default for professional look */
+    background: hsl(0 0% 0%);
+    color: hsl(0 0% 95%);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(0 0% 5%);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(24 100% 50%);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(24 100% 40%);
+  }
+}

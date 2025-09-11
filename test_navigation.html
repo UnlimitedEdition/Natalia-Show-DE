@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        #hero {
+            background-color: #3b82f6;
+        }
+        #podcast {
+            background-color: #ef4444;
+        }
+        #cultural {
+            background-color: #10b981;
+        }
+        #kitchen {
+            background-color: #f59e0b;
+        }
+        #diaspora {
+            background-color: #8b5cf6;
+        }
+        #contact {
+            background-color: #ec4899;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#hero">Hero</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#cultural">Cultural</a>
+        <a href="#kitchen">Kitchen</a>
+        <a href="#diaspora">Diaspora</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="hero" class="section">
+        <h1>Hero Section</h1>
+    </section>
+    
+    <section id="podcast" class="section">
+        <h1>Podcast Section</h1>
+    </section>
+    
+    <section id="cultural" class="section">
+        <h1>Cultural Section</h1>
+    </section>
+    
+    <section id="kitchen" class="section">
+        <h1>Kitchen Section</h1>
+    </section>
+    
+    <section id="diaspora" class="section">
+        <h1>Diaspora Section</h1>
+    </section>
+    
+    <section id="contact" class="section">
+        <h1>Contact Section</h1>
+    </section>
+    
+    <script>
+        // Test scroll to section functionality
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

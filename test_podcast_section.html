@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Section Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .podcast-section {
+            padding: 64px 16px;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        .podcast-card {
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .podcast-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .video-placeholder {
+            background-color: #444;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-content {
+            padding: 16px;
+        }
+        .load-more-container {
+            text-align: center;
+            margin-top: 48px;
+        }
+        .load-more-btn {
+            padding: 12px 24px;
+            background-color: #ea580c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .load-more-btn:hover {
+            background-color: #c2410c;
+        }
+        .load-more-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="podcast-section">
+            <h2 class="section-title">Podcast</h2>
+            
+            <div class="podcast-grid">
+                <!-- Podcast Card 1 -->
+                <div class="podcast-card">
+                    <div class="video-placeholder">
+                        <span>Video Player</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-muted">Video</p>
+                    </div>
+                </div>
+                
+                <!-- Podcast Card 2 -->
+                <div class="podcast-card">
+                    <div class="video-placeholder">
+                        <span>Video Player</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-muted">Video</p>
+                    </div>
+                </div>
+                
+                <!-- Podcast Card 3 -->
+                <div class="podcast-card">
+                    <div class="video-placeholder">
+                        <span>Video Player</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-muted">Video</p>
+                    </div>
+                </div>
+                
+                <!-- Podcast Card 4 -->
+                <div class="podcast-card">
+                    <div class="video-placeholder">
+                        <span>Video Player</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-muted">Video</p>
+                    </div>
+                </div>
+                
+                <!-- Podcast Card 5 -->
+                <div class="podcast-card">
+                    <div class="video-placeholder">
+                        <span>Video Player</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-muted">Video</p>
+                    </div>
+                </div>
+                
+                <!-- Podcast Card 6 -->
+                <div class="podcast-card">
+                    <div class="video-placeholder">
+                        <span>Video Player</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="text-muted">Video</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
