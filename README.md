@@ -1,8 +1,14 @@
-# Natalia Show
+# Natalia-Show-DE
 
-Professional Podcasts & Cultural Reporting
+A multilingual website for showcasing various shows and content.
 
-## Features
+## Security Notice
+
+**Important**: This repository previously contained exposed API keys which have been removed. If you have cloned this repository before September 11, 2025, please ensure you pull the latest changes and follow the security instructions in `SECURITY_FIX_INSTRUCTIONS.md`.
+
+All sensitive information should now be stored in environment variables as documented in `.env.example`.
+
+## Setup
 
 - Multilingual support (Serbian, English, German)
 - Responsive design for all devices
@@ -38,13 +44,32 @@ The Podcast section now features:
 4. **Video Support**: Embedded social videos (YouTube, etc.) with proper aspect ratios
 5. **Responsive Design**: Adapts to different screen sizes (1 column on mobile, 2 on tablet, 3 on desktop)
 
-## Tech Stack
+## Environment Variables
 
-- React 18 with TypeScript
-- Tailwind CSS for styling
-- Supabase for backend services
-- React Router for navigation
-- React Hook Form for form handling
+Create a `.env` file in the root directory with the following variables:
+
+```
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+```
+
+## Security Best Practices
+
+1. Never commit sensitive information to version control
+2. Use environment variables for all credentials
+3. Regularly rotate API keys
+4. Monitor logs for unauthorized access
+5. Keep dependencies up to date
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Supabase
+- Radix UI
 
 ## Getting Started
 
@@ -55,13 +80,17 @@ The Podcast section now features:
 
 ## Available Scripts
 
-- `npm run dev` - Starts the development server
-- `npm run build` - Builds the production version
-- `npm run preview` - Previews the production build
+- `npm run dev` - Start the development server
+- `npm run build` - Build the production version
+- `npm run preview` - Preview the production build
 
 ## Deployment
 
 The application is deployed on Vercel and connected to a Supabase backend.
+
+## Contributing
+
+Please ensure you follow security best practices when contributing to this project.
 
 ## License
 
